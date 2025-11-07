@@ -1,0 +1,29 @@
+<html>
+
+<head>
+</head>
+
+<body>
+  <h1>O serviço SIGTAP-API está ativo!</h1>
+  <p>Este é um serviço API para disponibilizar consultas na base de dados do SIGTAP.</p>
+  <br>
+  <p>Seguem as rotas disponíveis:</p>
+  <ul>
+    {% for rota in rotas %}
+    <li><a href="{{ rota }}">{{ rota }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <br>
+  <h3>Observação!</h3>
+  <p>Para as APIs que possuem o parâmetro "cabecalho", pode-se informar:</p>
+  <ul>
+    <li>"U" = "Único" - Para retornar o cabeçalho em um registro, e os dados nos demais registros (simulando uma
+      planilha).</li>
+    <li>"S" = "Sim" - Para retornar o os nomes das colunas junto dos valores (padrão de um arquivo JSON).</li>
+    <li>"N" = "Não" - Para retornar apenas os dados, sem os nomes da colunas.</li>
+  </ul>
+  <p>Ao não informar, o padrão será o modo "Único"</p>
+</body>
+
+</html>
